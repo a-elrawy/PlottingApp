@@ -15,6 +15,9 @@
 
 ## Examples
 
+![plot](images/plottingapp.png)
+
+![plot](images/plottingapp2.png)
 
 
 
