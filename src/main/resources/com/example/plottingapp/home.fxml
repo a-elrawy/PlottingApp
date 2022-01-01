@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.plottingapp.PlotController">
+   <children>
+      <Label layoutX="16.0" layoutY="122.0" text="Enter the Required Function:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="func" layoutX="30.0" layoutY="154.0" onAction="#setFunc" prefHeight="20.0" prefWidth="218.0" />
+      <LineChart fx:id="lineChart" layoutX="256.0" layoutY="73.0" prefHeight="293.0" prefWidth="334.0" title="Plotting">
+        <xAxis>
+          <NumberAxis label="X" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="F(X)" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Label fx:id="errorEQ" layoutX="65.0" layoutY="187.0" text="Incorrect Expression" textFill="RED" />
+      <Label layoutX="37.0" layoutY="221.0" prefHeight="20.0" prefWidth="37.0" text="Min">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="min" layoutX="34.0" layoutY="251.0" prefHeight="7.0" prefWidth="43.0" />
+      <Label layoutX="111.0" layoutY="221.0" prefHeight="20.0" prefWidth="37.0" text="Max">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="max" layoutX="108.0" layoutY="251.0" prefHeight="7.0" prefWidth="43.0" />
+      <Label fx:id="errorRange" layoutX="34.0" layoutY="282.0" text="Incorrect Range" textFill="RED" />
+      <Button layoutX="74.0" layoutY="322.0" mnemonicParsing="false" onAction="#setFunc" prefHeight="24.0" prefWidth="104.0" snapToPixel="false" style="-fx-background-color: black;" text="Plot" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
